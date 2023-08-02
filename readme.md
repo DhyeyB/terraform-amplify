@@ -3,8 +3,8 @@
 This guide outlines the steps to set up AWS Amplify using Terraform or AWS CLI for your project.
 
 ## Clone the Repository
-To get started, clone the repository to your local machine using the following command:
-git clone <repository URL>
+To get started, clone the repository to your local machine using the following command: <br>
+`git clone <repository URL>`
 
 
 ## Setting Up AWS Amplify with Terraform

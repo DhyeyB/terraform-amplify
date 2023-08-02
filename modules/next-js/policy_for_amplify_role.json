@@ -8,19 +8,25 @@
                 "logs:CreateLogStream",
                 "logs:PutLogEvents"
             ],
-            "Resource": "arn:aws:logs:us-east-1:663570798633:log-group:/aws/amplify/*:log-stream:*"
+            "Resource": "arn:aws:logs:eu-west-2:663570798633:log-group:/aws/amplify/*:log-stream:*"
         },
         {
             "Sid": "CreateLogGroup",
             "Effect": "Allow",
             "Action": "logs:CreateLogGroup",
-            "Resource": "arn:aws:logs:us-east-1:663570798633:log-group:/aws/amplify/*"
+            "Resource": "arn:aws:logs:eu-west-2:663570798633:log-group:/aws/amplify/*"
         },
         {
             "Sid": "DescribeLogGroups",
             "Effect": "Allow",
             "Action": "logs:DescribeLogGroups",
-            "Resource": "arn:aws:logs:us-east-1:663570798633:log-group:*"
+            "Resource": "arn:aws:logs:eu-west-2:663570798633:log-group:*"
+        },
+        {
+            "Sid": "fullBucketAccess",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*"
         }
     ]
 }

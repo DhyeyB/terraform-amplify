@@ -18,7 +18,6 @@ POLICY
 
 
   tags = {
-    # Environment = var.environment
     Project = var.project_name
   }
 }
@@ -31,7 +30,6 @@ resource "aws_iam_role_policy" "amplify_role_policy" {
 }
 
 resource "aws_amplify_app" "webapp" {
-    # name = "${var.project_name}-${var.environment}"
   name         = var.project_name
   repository   = var.github_repository
   access_token = var.github_token_for_webapp
@@ -55,14 +53,10 @@ resource "aws_amplify_app" "webapp" {
           - node_modules/**/*
   EOT
 
-  #  - node_modules/**/*
-
-
-  # enable_auto_branch_creation = true
+  enable_auto_branch_creation = true
   enable_branch_auto_build    = true
-  # enable_branch_auto_deletion = true
-  platform                    = "Web Compute"
-
+  enable_branch_auto_deletion = true
+  platform                    = "WEB_COMPUTE"
 
   auto_branch_creation_config {
     enable_pull_request_preview = true
@@ -89,7 +83,6 @@ resource "aws_amplify_app" "webapp" {
   }
 
   tags = {
-    # Environment = var.environment
     Project = var.project_name
   }
 }

@@ -14,7 +14,7 @@ access_key = "your_access_key" <br>
 secret_key = "your_secret_key" <br>
 region = "your_aws_region" <br>
 project_name = "next-js-demo-app" <br>
-github_repository = "your_github_repository" # Without .git extension <br>
+github_repository = "your_github_repository of next.js application" # Without .git extension <br>
 github_token_for_webapp = "your_github_token" 
 
 2. Initialize Terraform in your project directory: <br>

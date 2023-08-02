@@ -9,34 +9,36 @@ git clone <repository URL>
 
 ## Setting Up AWS Amplify with Terraform
 
-1. Create a `terraform.tfvars` file and specify the variable values as shown below:
-access_key = "your_access_key"
-secret_key = "your_secret_key"
-region = "your_aws_region"
-project_name = "next-js-demo-app"
-github_repository = "your_github_repository" # Without .git extension
-github_token_for_webapp = "your_github_token"
+1. Create a `terraform.tfvars` file and specify the variable values as shown below: <br>
+access_key = "your_access_key" <br>
+secret_key = "your_secret_key" <br>
+region = "your_aws_region" <br>
+project_name = "next-js-demo-app" <br>
+github_repository = "your_github_repository" # Without .git extension <br>
+github_token_for_webapp = "your_github_token" 
 
-2. Initialize Terraform in your project directory:
-terraform init
+2. Initialize Terraform in your project directory: <br>
+`terraform init`
 
-3. Get an overview of the services that will be created:
-terraform plan
+3. Get an overview of the services that will be created: <br>
+`terraform plan`
 
-4. Apply the Terraform configuration to create the infrastructure on AWS:
-terraform apply --auto-approve
+4. Apply the Terraform configuration to create the infrastructure on AWS: <br>
+`terraform apply --auto-approve`
 
 5. Once Terraform applies the changes, the Amplify service's built-in CICD functionality will be set up. Any code pushed to your repository will automatically deploy on Amplify.
 
-6. To destroy the infrastructure when needed:
-terraform destroy --auto-approve
+6. To destroy the infrastructure when needed: <br>
+`terraform destroy --auto-approve`
 
 ## Setting Up AWS Amplify with AWS CLI
 
 1. Navigate to the root directory of your code repository in your terminal.
 
-2. Run the following command to initiate the AWS Amplify setup:
-amplify initFollow the prompts and provide the required details as requested.
+2. Run the following command to initiate the AWS Amplify setup: <br>
+`amplify init`
+
+Follow the prompts and provide the required details as requested.
 
 ---
 

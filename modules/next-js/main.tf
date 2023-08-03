@@ -66,15 +66,7 @@ resource "aws_amplify_app" "webapp" {
   }
 
   iam_service_role_arn = aws_iam_role.amplify_role.arn
-
-  #Comment this on the first run, trigger a build of your branch, This will added automatically on the console after deployment. Add it here to ensure your subsequent terraform runs don't break your amplify deployment.
-    custom_rule {
-      source = "/<*>"
-      status = "200"
-      target = "https://<*>.cloudfront.net/<*>" 
-      condition = "null"
-    }
-
+    
     custom_rule {
     source = "/<^[^.]+$|\\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)>"
     status = "200"

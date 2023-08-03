@@ -15,20 +15,22 @@ secret_key = "your_secret_key" <br>
 region = "your_aws_region" <br>
 project_name = "next-js-demo-app" <br>
 github_repository = "your_github_repository of next.js application" # Without .git extension <br>
-github_token_for_webapp = "your_github_token" 
+github_token_for_webapp = "your_github_token"
 
-2. Initialize Terraform in your project directory: <br>
+2. change the region and account_id accordingly in the amplify role policy which is present in the modules directory.
+
+3. Initialize Terraform in your project directory: <br>
 `terraform init`
 
-3. Get an overview of the services that will be created: <br>
+4. Get an overview of the services that will be created: <br>
 `terraform plan`
 
-4. Apply the Terraform configuration to create the infrastructure on AWS: <br>
+5. Apply the Terraform configuration to create the infrastructure on AWS: <br>
 `terraform apply --auto-approve`
 
-5. Once Terraform applies the changes, the Amplify service's built-in CICD functionality will be set up. Any code pushed to your repository will automatically deploy on Amplify.
+6. Once Terraform applies the changes, the Amplify service's built-in CICD functionality will be set up. Any code pushed to your repository will automatically deploy on Amplify.
 
-6. To destroy the infrastructure when needed: <br>
+7. To destroy the infrastructure when needed: <br>
 `terraform destroy --auto-approve`
 
 ## Setting Up AWS Amplify with AWS CLI

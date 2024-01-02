@@ -3,6 +3,7 @@ variable "region" {
 }
 
 variable "project_name" {
+  type = string
 }
 
 variable "github_token_for_webapp" {
